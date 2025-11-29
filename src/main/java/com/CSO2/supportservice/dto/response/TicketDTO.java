@@ -1,4 +1,4 @@
-package com.CSO2.supportservice.dto;
+package com.CSO2.supportservice.dto.response;
 
 import com.CSO2.supportservice.entity.SupportTicket;
 import lombok.AllArgsConstructor;

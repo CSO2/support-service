@@ -1,7 +1,7 @@
 package com.CSO2.supportservice.controller;
 
-import com.CSO2.supportservice.dto.CreateTicketRequest;
-import com.CSO2.supportservice.dto.TicketDTO;
+import com.CSO2.supportservice.dto.request.CreateTicketRequest;
+import com.CSO2.supportservice.dto.response.TicketDTO;
 import com.CSO2.supportservice.service.TicketService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

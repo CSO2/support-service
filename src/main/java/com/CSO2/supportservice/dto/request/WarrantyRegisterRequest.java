@@ -1,4 +1,4 @@
-package com.CSO2.supportservice.dto;
+package com.CSO2.supportservice.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,6 +1,6 @@
 package com.CSO2.supportservice.controller;
 
-import com.CSO2.supportservice.dto.WarrantyRegisterRequest;
+import com.CSO2.supportservice.dto.request.WarrantyRegisterRequest;
 import com.CSO2.supportservice.entity.WarrantyRegistration;
 import com.CSO2.supportservice.service.WarrantyService;
 import lombok.RequiredArgsConstructor;
