@@ -65,6 +65,12 @@ public class TicketService {
                                 .collect(Collectors.toList());
         }
 
+        public java.util.List<TicketDTO> getAllTickets() {
+                return ticketRepository.findAll().stream()
+                                .map(this::mapToDTO)
+                                .collect(Collectors.toList());
+        }
+
         private TicketDTO mapToDTO(SupportTicket ticket) {
                 return TicketDTO.builder()
                                 .id(ticket.getId())

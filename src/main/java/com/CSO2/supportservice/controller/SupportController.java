@@ -36,4 +36,13 @@ public class SupportController {
     public ResponseEntity<List<TicketDTO>> getUserTickets(@RequestHeader("X-User-Id") String userId) {
         return ResponseEntity.ok(ticketService.getUserTickets(userId));
     }
+
+    @GetMapping("/tickets/all")
+    public ResponseEntity<java.util.List<TicketDTO>> getAllTickets(@AuthenticationPrincipal org.springframework.security.core.userdetails.UserDetails userDetails) {
+        boolean isAdmin = userDetails.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ROLE_ADMIN"));
+        if (!isAdmin) {
+            return ResponseEntity.status(org.springframework.http.HttpStatus.FORBIDDEN).build();
+        }
+        return ResponseEntity.ok(ticketService.getAllTickets());
+    }
 }
