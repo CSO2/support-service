@@ -6,6 +6,7 @@ import com.CSO2.supportservice.service.TicketService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 
 import java.util.List;
 import java.util.Map;
@@ -38,7 +39,8 @@ public class SupportController {
     }
 
     @GetMapping("/tickets/all")
-    public ResponseEntity<java.util.List<TicketDTO>> getAllTickets(@AuthenticationPrincipal org.springframework.security.core.userdetails.UserDetails userDetails) {
+    public ResponseEntity<java.util.List<TicketDTO>> getAllTickets(
+            @AuthenticationPrincipal org.springframework.security.core.userdetails.UserDetails userDetails) {
         boolean isAdmin = userDetails.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ROLE_ADMIN"));
         if (!isAdmin) {
             return ResponseEntity.status(org.springframework.http.HttpStatus.FORBIDDEN).build();
