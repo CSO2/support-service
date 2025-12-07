@@ -2,8 +2,9 @@ package com.CSO2.supportservice.config;
 
 import com.CSO2.supportservice.entity.SupportTicket;
 import com.CSO2.supportservice.entity.WarrantyRegistration;
-import com.CSO2.supportservice.repository.TicketRepository;
-import com.CSO2.supportservice.repository.WarrantyRepository;
+import com.CSO2.supportservice.repository.jpa.WarrantyRepository;
+import com.CSO2.supportservice.repository.mongo.TicketRepository;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

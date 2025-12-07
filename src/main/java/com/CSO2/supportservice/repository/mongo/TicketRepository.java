@@ -1,4 +1,4 @@
-package com.CSO2.supportservice.repository;
+package com.CSO2.supportservice.repository.mongo;
 
 import com.CSO2.supportservice.entity.SupportTicket;
 import org.springframework.data.mongodb.repository.MongoRepository;

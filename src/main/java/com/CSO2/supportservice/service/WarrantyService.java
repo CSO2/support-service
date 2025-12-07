@@ -3,7 +3,8 @@ package com.CSO2.supportservice.service;
 import com.CSO2.supportservice.client.OrderServiceClient;
 import com.CSO2.supportservice.dto.request.WarrantyRegisterRequest;
 import com.CSO2.supportservice.entity.WarrantyRegistration;
-import com.CSO2.supportservice.repository.WarrantyRepository;
+import com.CSO2.supportservice.repository.jpa.WarrantyRepository;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

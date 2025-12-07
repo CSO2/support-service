@@ -1,4 +1,4 @@
-package com.CSO2.supportservice.repository;
+package com.CSO2.supportservice.repository.jpa;
 
 import com.CSO2.supportservice.entity.StoreLocation;
 import org.springframework.data.jpa.repository.JpaRepository;

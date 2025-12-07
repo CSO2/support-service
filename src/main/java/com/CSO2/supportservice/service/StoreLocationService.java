@@ -1,7 +1,8 @@
 package com.CSO2.supportservice.service;
 
 import com.CSO2.supportservice.entity.StoreLocation;
-import com.CSO2.supportservice.repository.StoreLocationRepository;
+import com.CSO2.supportservice.repository.jpa.StoreLocationRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
