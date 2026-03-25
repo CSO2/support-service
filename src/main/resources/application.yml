@@ -11,8 +11,8 @@ spring:
   cloud:
     vault:
       enabled: true
-      uri: http://localhost:8200
-      token: my-root-token
+      uri: ${VAULT_ADDR:http://localhost:8200}
+      token: ${VAULT_TOKEN:my-root-token}
       kv:
         enabled: true
         backend: kv
@@ -38,7 +38,8 @@ spring:
   # 5. MongoDB Configuration (Standard, not using Vault for now)
   data:
     mongodb:
-      uri: mongodb://localhost:27017/CSO2_support_service
+      # URI resolved from Vault key: support_mongodb_uri
+      uri: ${support_mongodb_uri:mongodb://localhost:27017/CSO2_support_service}
 
 # --- Server Port ---
 server:
